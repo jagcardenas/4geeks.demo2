@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Excusas</title>
+    <style>
+        body {
+            margin-top: 170px;
+        }
+        h1 {
+            width: 600px;
+            height: 100px;
+            background-color: green;
+            color: white;
+            margin: auto;
+            font-size: 25px;
+            text-align: center;
+            line-height: 100px;
+            padding: 0;
+            box-sizing: border-box;
+            margin-top: 0px;
+        }
+        button {
+            padding: 8px;
+            background-color: blue;
+            color: white;
+            font-weight: 700;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        div {
+            margin: auto;
+            width: 68px;
+        }
+    </style>
+</head>
+<body>
+    <h1>I'm sorry but</h1>
+    <script>
+            const onLoad = () => {
+            
+            let who = ['the dog','my granma','his turtle','my bird'];
+            let action = ['ate','peed','crushed','broke'];
+            let what = ['my homework', 'the keys', 'the car'];
+            let when = ['before the class','right in time','when I finished','during my lunch','while I was praying'];
+
+            let excuse = '';
+            excuse += who[Math.floor(Math.random()*who.length)] + ' ';
+            excuse += action[Math.floor(Math.random()*action.length)] + ' ';
+            excuse += what[Math.floor(Math.random()*what.length)] + ' ';
+            excuse += when[Math.floor(Math.random()*when.length)];
+        
+            return excuse
+            }
+
+            var miExcusa = onLoad();
+
+            const h1 = document.createElement("h1"); //crear elemento html
+            h1.append(miExcusa); //asignar texto al elemento
+            document.body.appendChild(h1); //anexar elemento al body div
+    </script>
+    <div>
+        <button onclick="location.reload()">Recargar</button>
+    </div>
+</body>
+</html>
